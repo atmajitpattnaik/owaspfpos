@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OWASP False Positive Checker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>OWASP Report False Positive Checker</h1>
+            <p>Upload your OWASP HTML report and dependencies.json to identify false positives</p>
+        </header>
+
+        <div class="upload-section">
+            <h2>Upload Files</h2>
+            <form id="uploadForm">
+                <div class="file-input-group">
+                    <label for="owaspReport">OWASP HTML Report:</label>
+                    <input type="file" id="owaspReport" name="owaspReport" accept=".html,.htm" required>
+                </div>
+                <div class="file-input-group">
+                    <label for="dependencies">dependencies.json:</label>
+                    <input type="file" id="dependencies" name="dependencies" accept=".json" required>
+                </div>
+                <button type="submit" id="analyzeBtn" class="btn-primary">Analyze</button>
+            </form>
+        </div>
+
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Analyzing files...</p>
+        </div>
+
+        <div id="results" class="results hidden">
+            <div class="results-header">
+                <h2>Analysis Results</h2>
+                <div class="summary">
+                    <span id="summaryText"></span>
+                </div>
+                <button id="downloadBtn" class="btn-secondary">Download False_positives.html</button>
+            </div>
+
+            <div class="results-content">
+                <div class="result-box">
+                    <h3>False Positives in Direct Dependencies</h3>
+                    <div id="directDependencies" class="result-list">
+                        <p class="no-results">No false positives found in direct dependencies.</p>
+                    </div>
+                </div>
+
+                <div class="result-box">
+                    <h3>False Positives in Nested Libraries</h3>
+                    <div id="nestedLibraries" class="result-list">
+                        <p class="no-results">No false positives found in nested libraries.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="error" class="error hidden">
+            <h3>Error</h3>
+            <p id="errorMessage"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

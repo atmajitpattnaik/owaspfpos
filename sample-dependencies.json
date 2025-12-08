@@ -1,0 +1,43 @@
+{
+  "dependencies": [
+    {
+      "name": "express",
+      "version": "4.17.3",
+      "children": [
+        {
+          "name": "body-parser",
+          "version": "1.19.0",
+          "children": [
+            {
+              "name": "qs",
+              "version": "6.7.0"
+            },
+            {
+              "name": "media-typer",
+              "version": "0.3.0"
+            }
+          ]
+        },
+        {
+          "name": "cookie-signature",
+          "version": "1.0.6"
+        }
+      ]
+    },
+    {
+      "name": "axios",
+      "version": "0.21.1",
+      "children": [
+        {
+          "name": "follow-redirects",
+          "version": "1.14.1"
+        }
+      ]
+    },
+    {
+      "name": "lodash",
+      "version": "4.17.21"
+    }
+  ]
+}
+
