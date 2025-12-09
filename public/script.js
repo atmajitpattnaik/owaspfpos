@@ -115,72 +115,87 @@ downloadBtn.addEventListener('click', () => {
     const timestamp = new Date().toLocaleString();
     
     const htmlContent = `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OWASP False Positives Report</title>
-    <style>
-        body {
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>OWASP False Positives Report</title>
+        <style>
+            body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
-            background: #f5f5f5;
-            color: #333;
+            background: #EEF2F5;
+            color: #025064;
         }
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #317D9B;
             color: white;
             padding: 30px;
             border-radius: 8px;
             margin-bottom: 30px;
+            text-align: center;
         }
-        h1 { margin: 0 0 10px 0; }
-        .timestamp { opacity: 0.9; font-size: 14px; }
+        h1 { 
+            margin: 0 0 10px 0;
+            color: white;
+        }
+        .timestamp { 
+            opacity: 0.9; 
+            font-size: 14px;
+            color: white;
+        }
         .summary {
             background: white;
             padding: 20px;
             border-radius: 8px;
             margin-bottom: 30px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(2, 80, 100, 0.1);
         }
-        .summary h2 { margin-top: 0; color: #667eea; }
+        .summary h2 { 
+            margin-top: 0; 
+            color: #317D9B;
+        }
         .stat { 
             display: inline-block;
             margin-right: 30px;
             font-size: 16px;
+            color: #025064;
         }
-        .stat strong { color: #667eea; }
+        .stat strong { 
+            color: #317D9B;
+        }
         .section {
             background: white;
             padding: 25px;
             border-radius: 8px;
             margin-bottom: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(2, 80, 100, 0.1);
         }
         .section h2 {
-            color: #667eea;
+            color: #317D9B;
             margin-top: 0;
-            border-bottom: 2px solid #667eea;
+            border-bottom: 2px solid #317D9B;
             padding-bottom: 10px;
         }
         .result-item {
-            background: #f8f9fa;
+            background: #EEF2F5;
             padding: 15px;
             margin: 15px 0;
             border-radius: 6px;
-            border-left: 4px solid #667eea;
+            border-left: 4px solid #025064;
         }
         .result-item h4 {
             margin: 0 0 10px 0;
-            color: #333;
+            color: #025064;
             font-size: 18px;
         }
         .version-info, .parent-info {
             margin: 8px 0;
             font-size: 14px;
+            color: #025064;
         }
         .reason {
             margin-top: 10px;
@@ -189,16 +204,17 @@ downloadBtn.addEventListener('click', () => {
             border-radius: 4px;
             font-size: 14px;
             line-height: 1.5;
+            color: #025064;
         }
         .no-results {
-            color: #28a745;
+            color: #025064;
             font-style: italic;
             padding: 20px;
             text-align: center;
         }
         @media print {
             body { background: white; }
-            .section { box-shadow: none; border: 1px solid #ddd; }
+            .section { box-shadow: none; border: 1px solid #317D9B; }
         }
     </style>
 </head>
