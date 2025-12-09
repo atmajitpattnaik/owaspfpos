@@ -9,19 +9,20 @@
 <body>
     <div class="container">
         <header>
+            <img src="logo.png" alt="Company Logo" class="logo">
             <h1>OWASP Report False Positive Checker</h1>
-            <p>Upload your OWASP HTML report and dependencies.json to identify false positives</p>
+            <p>Upload your OWASP report in a HTML file and Actual Dependencies in a JSON file to identify false positives</p>
         </header>
 
         <div class="upload-section">
             <h2>Upload Files</h2>
             <form id="uploadForm">
                 <div class="file-input-group">
-                    <label for="owaspReport">OWASP HTML Report:</label>
+                    <label for="owaspReport">OWASP Report:</label>
                     <input type="file" id="owaspReport" name="owaspReport" accept=".html,.htm" required>
                 </div>
                 <div class="file-input-group">
-                    <label for="dependencies">dependencies.json:</label>
+                    <label for="dependencies">Actual Dependencies:</label>
                     <input type="file" id="dependencies" name="dependencies" accept=".json" required>
                 </div>
                 <button type="submit" id="analyzeBtn" class="btn-primary">Analyze</button>
@@ -68,4 +69,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
